@@ -1,8 +1,18 @@
+html {
+  box-sizing: content-box;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 5vmin;
+  height: 100vh;
+  font: 1rem "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #BEEDEF;
 }
 
 a {
   color: #00B7FF;
+}
+
+#home-page-title {
+  font-size: 15vw;
 }
