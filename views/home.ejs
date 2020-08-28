@@ -1,22 +1,20 @@
 <%- include('partials/header') %>
   <div class='content'>
     <h1 id='home-page-title'>Welcome!</h1>
-    <p class='app-intro'>BreadCrumbs is an app to help you 
+    <p class='app-intro'>breadCrumbs.io is an app to help you 
       build your node applications using
-      the <a href="">MVC model.</a></p>
-    <ul class="right">
-      <li>
-      <% if (user) { %>
-        <a href="/auth/logout">Log Out</a>
-      <% } else { %>
-        <a href="/auth/google">Login with Google</a>
-      <% } %>
-      </li>
-    </ul>
-    <ul>Registered Users:
-      <% users.forEach(u => { %>
-        <li><%= u.name %></li>
-      <% }) %>
-    </ul>
+      the <a id='mvc-toggle-btn'>MVC model.</a></p>
+      <div hidden id="mvc-model-container">
+        <img id='mvc-model' src="/images/mvc-by-David-Stinson.png" alt="MVC Model Diagram">
+        <p id='photo-credit'>Photo Credit: <a href="https://www.linkedin.com/in/david-stinson/" target="_blank">David Stinson <i class="fa fa-linkedin-square"></i></a></p>
+      </div>
+      <p class='app-intro'>It will guide you through the main
+        steps of setting up your Node app
+        using Express, ejs, MongoDB Atlas,
+        mongoose, dotenv and Google oAuth.</p>
+        <% if(!user) { %>
+          <a href="/auth/google"><p class='app-intro'>Log in to start finding breab crumbs!</p></a>
+        <% } %>
   </div>
+  <script src='javascripts/mvc-toggle-button.js'></script>
     <%- include('partials/footer') %>

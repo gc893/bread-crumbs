@@ -9,30 +9,54 @@ body {
   background-color: #BEEDEF;
 }
 
-.navBar p {
-  margin: 0;
-}
-
 .navBar {
   margin: 0;
   padding: 1em;
-  background-color: whitesmoke;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+
+  .navBar p {
+    margin: 0;
+    display: inline;
+  }
+
+  #log-in-out {
+    height: 28px;
 }
 
 .content {
-  padding: 0 5vmin 5vmin 5vmin ;
+  padding: 0 7vmin 5vmin 5vmin ;
+  }
+
+  #home-page-title {
+    font-size: 2.5rem;
+    font-family: 'Righteous', cursive;
+  }
+
+  #mvc-model-container {
+    text-align: center;
+    }
+
+    #mvc-model {
+      width: 100%;
+      max-width: 800px;
+    }
+
+    #photo-credit {
+      font-size: 0.75rem;
+  }
+
+  .app-intro {
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  a {
+    color: #00B7FF;
 }
 
-a {
-  color: #00B7FF;
-}
 
-#home-page-title {
-  font-size: 2.5rem;
-  font-family: 'Righteous', cursive;
-}
 
-.app-intro {
-  font-size: 1rem;
-  font-family: 'Raleway', sans-serif;
-}

@@ -4,6 +4,7 @@
     <title><%= title %></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Righteous&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='/stylesheets/style.css'/>
   </head>
@@ -11,7 +12,9 @@
       <div class='navBar'>
           <% if(user) { %>
             <p>Hello, <%= user.name %> </p>
+            <a href="/auth/logout"><img id='log-in-out' src="https://i.imgur.com/RBVIyYY.png" alt="Log Out" /></a>
           <% } else { %>
-            <p>breadCrumbs.io</p> 
+            <p>breadCrumbs.io</p>
+            <a href="/auth/google"><img id='log-in-out' src="https://i.imgur.com/hvuxIvS.png" alt="Log In" /></a>
           <% } %> 
       </div>
