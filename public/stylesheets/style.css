@@ -1,12 +1,26 @@
 html {
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 body {
-  padding: 5vmin;
+  margin: 0;
   height: 100vh;
-  font: 1rem "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
   background-color: #BEEDEF;
+}
+
+.navBar p {
+  margin: 0;
+}
+
+.navBar {
+  margin: 0;
+  padding: 1em;
+  background-color: whitesmoke;
+}
+
+.content {
+  padding: 0 5vmin 5vmin 5vmin ;
 }
 
 a {
@@ -14,5 +28,11 @@ a {
 }
 
 #home-page-title {
-  font-size: 15vw;
+  font-size: 2.5rem;
+  font-family: 'Righteous', cursive;
+}
+
+.app-intro {
+  font-size: 1rem;
+  font-family: 'Raleway', sans-serif;
 }
