@@ -29,9 +29,10 @@
             <button class='main-btn go-button' type="submit">Go</button>
         </form>
     </div>
-
-    <div id='add-guide-container' class=''>
-        <a href="" class='main-btn add-button'>+</a>
-    </div>
+    <% if (user.role === 'admin') { %>
+        <div id='add-guide-container' class=''>
+                <a href="/guides/new" class='main-btn add-button'>+</a>
+        </div>
+    <% } %> 
 
 <%- include('../partials/footer') %>

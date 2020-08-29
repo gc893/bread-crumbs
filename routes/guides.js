@@ -2,7 +2,12 @@ var router = require('express').Router();
 var guidesCtrl = require('../controllers/guides');
 
 /* GET home page. */
-router.get('/', isLoggedIn ,guidesCtrl.index);
+router.get('/', isLoggedIn ,guidesCtrl.index);//index
+router.get('/new', isLoggedIn ,guidesCtrl.new);//render new view
+router.get('/:id', isLoggedIn ,guidesCtrl.index);//show guide, comments and add comment box
+router.get('/:id/edit', isLoggedIn ,guidesCtrl.index);//render new view and load guide
+router.post('/', isLoggedIn ,guidesCtrl.index);//add new guide
+router.post('/:id/comments', isLoggedIn ,guidesCtrl.index);//add new comment
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();
