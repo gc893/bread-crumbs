@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const reviewSchema = new mongoose.Schema({
-    user_id: {type: Schema.Types.ObjectId, ref: 'User'},
+    user_id: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
     comment: {type: String, required: true},
     score: {type: Number}
 }, {

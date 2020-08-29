@@ -1,5 +1,22 @@
 <%- include('../partials/header') %>
-
-
-
+    <div class='main-container form-container'>
+        <form action="/guides" method="post" class="new-guide-form">
+            <div class="inner-form-container">
+              <label for="title">Guide Title: </label>
+              <input type="text" name="title" id="name" required>
+            </div>
+            <div class="inner-form-container">
+              <label for="action">Action: </label>
+              <input type="text" name="action" id="action" required>
+            </div>
+            <div class="inner-form-container">
+                <label for="app-component">App Component: </label>
+                <input type="text" name="app_component" id="app-component" required>
+              </div>
+            <div id="form-buttons-container">
+                <a href="/guides" class="main-btn cancel-button" id='form-btn'>Cancel</a>
+                <button type="submit" class="main-btn create-btn" id='form-btn'>Create!</button>
+            </div>
+        </form>
+    </div>
 <%- include('../partials/footer') %>
