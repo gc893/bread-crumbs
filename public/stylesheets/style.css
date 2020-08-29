@@ -26,12 +26,12 @@ body {
   }
 
   .fa-sign-in-alt {
-    font-size: 2rem;
+    font-size: 2em;
     color: black;
   }
   
   .fa-sign-out-alt {
-    font-size: 2rem;
+    font-size: 2em;
     color: black;
 }
 
@@ -40,7 +40,7 @@ body {
   }
 
   #title {
-    font-size: 2.5rem;
+    font-size: 2.5em;
     font-family: 'Righteous', cursive;
   }
 
@@ -57,11 +57,11 @@ body {
     }
 
     #photo-credit {
-      font-size: 0.75rem;
+      font-size: 0.75em;
   }
 
   .app-intro {
-    font-size: 1rem;
+    font-size: 1em;
     font-family: 'Raleway', sans-serif;
   }
 
@@ -82,7 +82,7 @@ body {
   }
 
   #sub-title {
-    font-size: 2rem;
+    font-size: 2em;
     font-family: 'Righteous', cursive;
   }
 
@@ -93,22 +93,35 @@ body {
     background-color: whitesmoke;
     width: 100%;
     max-width: 400px;
-    height: 2rem;
-    margin-bottom: 2rem;
+    height: 2em;
+    margin-bottom: 2em;
   }
 
-  .go-button {
+  .main-btn {
     font-family: 'Righteous', cursive;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     border-radius: 10px;
     color: whitesmoke;
     background-color: #333;
-    padding: 0.5rem 1.8rem;
+    padding: 0.5em 1.8em;
   }
+
+  a.main-btn {
+    font-size: 1.25em;
+    text-decoration: none;
+    box-shadow: inset 2px 2px rgba(255,255,255,0.4), inset -2px -2px rgba(0,0,0,0.6);
+  }
+
   .go-button:hover {
       filter: brightness(150%)
   }
   .go-button {
-      transform: translate(0, 0.3rem)
+      transform: translate(0, 0.3em)
+}
+
+#add-guide-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

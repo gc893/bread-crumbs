@@ -4,7 +4,7 @@ var userSchema = new mongoose.Schema({
     name: String,
     email: String,
     avatar: String,
-    //type: String,
+    role: {type: String, default: 'user'},
     googleId: String
 }, {
     timestamps: true
