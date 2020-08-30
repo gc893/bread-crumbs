@@ -2,7 +2,6 @@ const Guide = require('../models/guides');
 
 function index(req, res) {
   Guide.find({}, null, function(err, guides) {
-    console.log(guides);
     const actions = [];
     guides.forEach(el => {
       if (!actions.find(target => target === el.action)) {actions.push(el.action)}
@@ -20,6 +19,7 @@ function newGuide(req, res) {
 }
 
 function create(req, res) {
+  req.body.slug = `${req.body.action}-${req.body.app_component}`.toLowerCase()
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key];
   }
@@ -34,8 +34,23 @@ function create(req, res) {
   })
 }
 
+function search(req, res) {
+  const slug = `${req.query.action}-${req.query.app_component}`.toLowerCase();
+  //if guide found redirect, else go back to library (with message couldnt find)
+  res.redirect(`/guides/${slug}`);
+}
+
+function show(req, res) {
+  console.log(req.params)
+  Guide.find({slug: req.params.id}, null, function(err, guide){
+    res.render('guides/show', {title: 'test', guide, user: req.user})
+  })
+}
+
 module.exports = {
   index,
   new: newGuide,
-  create
+  create,
+  search,
+  show
 };

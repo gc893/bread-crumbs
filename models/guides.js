@@ -18,6 +18,7 @@ const stepSchema = new mongoose.Schema({
 
 const guideSchema = new mongoose.Schema({
     title: {type: String, required: true},
+    slug: {type: String, required: true},
     action: {type: String, required: true},
     app_component: {type: String, required: true},
     steps: [stepSchema],
