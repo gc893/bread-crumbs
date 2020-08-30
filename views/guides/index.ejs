@@ -4,26 +4,20 @@
         <h3 id='sub-title'>I want to</h3>
 
         <form action="">
-            <select name="pets" id="action-dropdown">
+            <select name="action" id="action-dropdown">
                 <option disabled selected value=""></option>
-                <option value="dog">Dog</option>
-                <option value="cat">Cat</option>
-                <option value="hamster">Hamster</option>
-                <option value="parrot">Parrot</option>
-                <option value="spider">Spider</option>
-                <option value="goldfish">Goldfish</option>
+                <% actions.forEach(action => { %>
+                    <option value=<%= `${action}` %>><%= action %></option>
+                <% }) %> 
             </select>
 
             <h3 id='sub-title'>a(n)</h3>
 
-            <select name="pets" id="item-dropdown">
+            <select name="component" id="component-dropdown">
                 <option disabled selected value=""></option>
-                <option value="dog">Dog</option>
-                <option value="cat">Cat</option>
-                <option value="hamster">Hamster</option>
-                <option value="parrot">Parrot</option>
-                <option value="spider">Spider</option>
-                <option value="goldfish">Goldfish</option>
+                <% components.forEach(component => { %>
+                    <option value=<%= `${component}` %>><%= component %></option>
+                <% }) %> 
             </select>
             <br>
             <button class='main-btn go-button' type="submit">Go</button>

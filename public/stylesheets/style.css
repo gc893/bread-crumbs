@@ -154,6 +154,8 @@ body {
     max-width: 400px;
     height: 2em;
     margin-bottom: 2em;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
   }
 
   #form-buttons-container {
