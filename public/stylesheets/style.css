@@ -54,6 +54,7 @@ body {
     background-color: whitesmoke;
     border-radius: 0 0 20px 20px;
     padding: 2vmin;
+    max-width: 900px;
     }
 
     #mvc-model, #routes-table {
@@ -167,4 +168,29 @@ body {
   #form-buttons-container {
     margin: 5vmin 0 2vmin 0;
 
+}
+
+#guide-title {
+  display: block;
+  font-size: 2em;
+  font-family: 'Righteous', cursive;
+  margin: 5vmin 5vmin 2vmin 5vmin;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  margin: 5vmin 5vmin 3vmin 5vmin;
+  background-color: white;
+  border-radius: 25px;
+  max-width: 1000px;
+  overflow: hidden;
+}
+
+.card pre[class*=language-] {
+  padding: 0.5em 1em;
+  margin-bottom: 0;
 }

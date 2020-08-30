@@ -1,9 +1,20 @@
-<%- include('../partials/header') %>
+    <%- include('../partials/header') %>
+    <% guide.forEach(el => { %>
+        <h3 id="guide-title"><%= el.title %></h3>
+        <div class="card-container">
+            <div class="card" style="width: 90%;">
+                <div class="card-body">
+                <h5 class="card-title"><%= el.title %></h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+                <img hidden src="..." class="card-img-top" alt="...">
+                <pre><code class="language-javascript">
+function test(a) {
+    console.log('test');
+}</code></pre>
+            </div>
+        </div>
+    <% }) %> 
 
-<% guide.forEach(el => { %> 
-
-<p><%= el.title %> </p>
-
-<% }) %> 
-
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>
