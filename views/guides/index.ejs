@@ -3,20 +3,20 @@
         
         <h3 id='sub-title'>I want to</h3>
 
-        <form action="">
+        <form action= <%= `/guides` %>>
             <select name="action" id="action-dropdown">
                 <option disabled selected value=""></option>
-                <% actions.forEach(action => { %>
-                    <option value=<%= `${action}` %>><%= action %></option>
+                <% actions.forEach(el => { %>
+                    <option value=<%= `${el}` %>><%= el %></option>
                 <% }) %> 
             </select>
 
             <h3 id='sub-title'>a(n)</h3>
 
-            <select name="component" id="component-dropdown">
+            <select name="app_component" id="app_component-dropdown">
                 <option disabled selected value=""></option>
-                <% components.forEach(component => { %>
-                    <option value=<%= `${component}` %>><%= component %></option>
+                <% components.forEach(el => { %>
+                    <option value=<%= `${el}` %>><%= el %></option>
                 <% }) %> 
             </select>
             <br>
