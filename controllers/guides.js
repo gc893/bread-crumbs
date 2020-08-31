@@ -41,8 +41,8 @@ function search(req, res) {
 }
 
 function show(req, res) {
-  console.log(req.params)
   Guide.find({slug: req.params.id}, null, function(err, guide){
+    console.log(guide)
     res.render('guides/show', {title: 'test', guide, user: req.user})
   })
 }

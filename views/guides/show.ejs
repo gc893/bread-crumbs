@@ -1,11 +1,17 @@
     <%- include('../partials/header') %>
     <% guide.forEach(el => { %>
-        <h3 id="guide-title"><%= el.title %></h3>
+        <h3 id="back-btn"><a href="/guides">&lt</a></h3><h3 id="guide-title"><%= el.title %></h3>
         <div class="card-container">
             <div class="card" style="width: 90%;">
                 <div class="card-body">
                     <h5 class="card-title"><%= el.title %></h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <% if (user.role === 'admin') { %>
+                        <div class="card-buttons">
+                            <a href="/guides" class="btn secondary-btn">Edit</a>
+                            <a href="/guides" class="btn secondary-btn">Delete</a>
+                        </div>
+                    <% } %>
                 </div>
                 <img hidden src="..." class="card-img-top" alt="...">
                 <pre><code class="language-javascript">
@@ -16,5 +22,14 @@ function test(a) {
             </div>
         </div>
     <% }) %> 
-
+    <% if (user.role === 'admin') { %>
+        <div id='add-step-container' class=''>
+            <button class='main-btn add-button'>+</button>
+        </div>
+        <div id="step-form-container">
+            <form action="/guides/<%= guide[0]._id %>" method="POST">
+                <button type="submit"></button>
+            </form>
+        </div>
+    <% } %> 
     <%- include('../partials/footer') %>
