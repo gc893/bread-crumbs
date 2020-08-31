@@ -24,7 +24,7 @@
         <div id='add-step-container' class=''>
             <button id='add-step-btn' class='main-btn add-button'>+</button>
         </div>
-        <div id="step-form-container" class="main-container">
+        <div hidden id="step-form-container" class="main-container">
             <form action="/guides/<%=guide[0]._id%>/steps" method="POST">
                 <div class='step-input-container'>
                     <label for="title">Title</label><br>
@@ -42,5 +42,5 @@
             </form>
         </div>
     <% } %>
-    <!-- <script src='javascripts/add-step-function.js'></script> -->
+    <script src="/javascripts/add-step-function.js"></script>
     <%- include('../partials/footer') %>

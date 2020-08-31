@@ -11,7 +11,6 @@ require('dotenv').config();
 
 const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'public')));
 
 // connect to the MongoDB with mongoose
 require('./config/database');
