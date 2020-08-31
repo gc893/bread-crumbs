@@ -36,14 +36,16 @@ function create(req, res) {
 
 function search(req, res) {
   const slug = `${req.query.action}-${req.query.app_component}`.toLowerCase();
-  //if guide found redirect, else go back to library (with message couldnt find)
   res.redirect(`/guides/${slug}`);
 }
 
 function show(req, res) {
   Guide.find({slug: req.params.id}, null, function(err, guide){
-    console.log(guide)
+    if(guide.length < 1){
+      res.redirect('/guides')//library later on with could not find message
+    } else {
     res.render('guides/show', {title: 'test', guide, user: req.user})
+    }
   })
 }
 
@@ -60,11 +62,24 @@ function addStep(req ,res) {
     })
 }
 
+function removeStep(req, res) {
+  Guide.findById(req.params.id)
+    .then(guide => {
+      console.log(guide)
+      const idx = guide.steps.findIndex(el => el._id === req.params.stepId);
+      guide.steps.splice(idx,1);
+      guide.save(function(err){
+        res.redirect(`/guides/${guide.slug}`)
+      })
+    })
+}
+
 module.exports = {
   index,
   new: newGuide,
   create,
   search,
   show,
-  addStep
+  addStep,
+  removeStep
 };

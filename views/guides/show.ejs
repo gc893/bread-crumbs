@@ -8,8 +8,10 @@
                     <p class="card-text"><%= el.description %></p>
                     <% if (user.role === 'admin') { %>
                         <div class="card-buttons">
-                            <a href="/guides" class="btn secondary-btn">Edit</a>
-                            <a href="/guides" class="btn secondary-btn">Delete</a>
+                                <a href="/guides" class="btn secondary-btn">Edit</a>
+                            <form action="/guides/<%=guide[0]._id%>/<%=el._id%>?_method=DELETE" method="GET">
+                                <button class="btn secondary-btn" type="submit">Delete</button>
+                            </form>
                         </div>
                     <% } %>
                 </div>

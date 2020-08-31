@@ -198,6 +198,9 @@ body {
   .card-buttons {
     text-align: right;
   }
+  .card-buttons form {
+    display: inline;
+  }
 
   .secondary-btn {
     font-family: 'Righteous', cursive;
