@@ -1,8 +1,8 @@
 const mvcBtn = document.getElementById('mvc-toggle-btn');
-const mvcDiv = document.getElementById('mvc-model-container')
-
 const mappingTableBtn = document.getElementById('routes-toggle-btn');
-const mappingTableDiv = document.getElementById('routes-table-container')
+
+const mvcDiv = document.getElementById('mvc-model-container');
+const mappingTableDiv = document.getElementById('routes-table-container');
 
 mvcBtn.addEventListener('click', showMvcDiagram);
 mappingTableBtn.addEventListener('click', showRoutesTable);

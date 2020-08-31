@@ -151,7 +151,7 @@ body {
     margin: 2vmin;
     }
 
-  input {
+  .primary-input {
     border-top: none;
     border-right: none;
     border-left: none;
@@ -234,4 +234,8 @@ body {
 #back-btn a{
   color: black;
   text-decoration: none;
+}
+
+#step-form-container {
+  margin: 5vmin;
 }

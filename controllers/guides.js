@@ -47,10 +47,24 @@ function show(req, res) {
   })
 }
 
+function addStep(req ,res) {
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key];
+  }
+  Guide.findById(req.params.id)
+    .then(guide => {
+      guide.steps.push(req.body);
+      guide.save(function(err){
+        res.redirect(`/guides/${guide.slug}`)
+      })
+    })
+}
+
 module.exports = {
   index,
   new: newGuide,
   create,
   search,
-  show
+  show,
+  addStep
 };
