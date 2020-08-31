@@ -180,17 +180,23 @@ body {
 .card-container {
   display: flex;
   justify-content: center;
-}
+  }
 
-.card {
-  margin: 5vmin 5vmin 3vmin 5vmin;
-  background-color: white;
-  border-radius: 25px;
-  max-width: 1000px;
-  overflow: hidden;
-}
+  .card {
+    margin: 5vmin 5vmin 3vmin 5vmin;
+    background-color: white;
+    border-radius: 25px;
+    max-width: 1000px;
+    overflow: hidden;
+  }
 
-.card pre[class*=language-] {
-  padding: 0.5em 1em;
-  margin-bottom: 0;
+  .card-body {
+    border: 0.4em solid #f5f2f0;
+    border-radius: 25px 25px 0 0;
+  }
+
+  .card pre[class*=language-] {
+    padding: 0.5em 1em;
+    margin-bottom: 0;
+    margin-top: 0;
 }
