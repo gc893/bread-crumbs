@@ -1,0 +1,19 @@
+<%- include('../partials/header') %>
+<div id="step-form-container" class="main-container">
+    <form action="/guides/<%= step._id %>/updateStep?_method=PUT" method="POST">
+        <div class='step-input-container'>
+            <label for="title">Title</label><br>
+            <input class='step-input' type="text" value="<%= step.title %>" name="title"><br><br>
+            <label for="description">Description</label><br>
+            <textarea class='step-input' name="description" cols="25" rows="10"><%= step.description %></textarea><br><br>
+            <label for="image">Image URL</label><br>
+            <input class='step-input' type="text" value="<%= step.image %>" name="image"><br><br>
+            <label for="code_block">Code</label><br>
+            <textarea class='step-input' name="code_block" cols="25" rows="10"><%= step.code_block %></textarea><br><br>
+        </div>
+        <div class='step-button-container'>
+            <button class="secondary-btn" type="submit">Update</button>
+        </div>
+    </form>
+</div>
+<%- include('../partials/footer') %>

@@ -74,6 +74,30 @@ function removeStep(req, res) {
     })
 }
 
+function editStep(req, res) {
+  Guide.findById(req.query.guideId)
+    .then(guide => {
+      const step = guide.steps.find(el => el._id.toString() === req.query.stepId);
+      console.log(typeof guide.steps[0])
+      console.log(req.query.stepId)
+      res.render('guides/stepDetails', {title: 'Edit Step', step, user: req.user})
+    })
+}
+
+function updateStep(req, res) {
+  Guide.find({'steps._id': req.params.stepId})
+    .then(guide => {
+      const idx = guide[0].steps.findIndex(el => el._id.toString() === req.params.stepId);
+      guide[0].steps[idx].title = req.body.title;
+      guide[0].steps[idx].description = req.body.description;
+      guide[0].steps[idx].image = req.body.image;
+      guide[0].steps[idx].code_block = req.body.code_block;
+      guide[0].save(function(err){
+        res.redirect(`/guides/${guide[0].slug}`)
+      })
+    })
+}
+
 module.exports = {
   index,
   new: newGuide,
@@ -81,5 +105,7 @@ module.exports = {
   search,
   show,
   addStep,
-  removeStep
+  removeStep,
+  editStep,
+  updateStep
 };
