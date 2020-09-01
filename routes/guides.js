@@ -10,7 +10,7 @@ router.get('/:id', isLoggedIn, guidesCtrl.show);//show guide, comments and add c
 router.get('/:id/edit', isLoggedIn, guidesCtrl.index);//render new view and load guide//admin
 router.post('/', isLoggedIn, guidesCtrl.create);//add new guide//admin
 router.post('/:id/steps', isLoggedIn, guidesCtrl.addStep);//add new step//admin
-router.post('/:id/comments', isLoggedIn ,guidesCtrl.index);//add new comment
+router.post('/:id/comments', isLoggedIn ,guidesCtrl.addComment);//add new comment
 router.put('/:stepId/updateStep', isLoggedIn, guidesCtrl.updateStep);//edit step//admin
 router.delete('/:id/:stepId', isLoggedIn, guidesCtrl.removeStep);
 

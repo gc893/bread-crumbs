@@ -98,6 +98,21 @@ function updateStep(req, res) {
     })
 }
 
+function addComment(req,res) {
+  req.body.user_id = req.user._id
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key];
+  }
+  console.log(req.body);
+  Guide.findById(req.params.id)
+    .then(guide => {
+      guide.reviews.push(req.body);
+      guide.save(function(err){
+        res.redirect(`/guides/${guide.slug}`)
+      })
+    })
+}
+
 module.exports = {
   index,
   new: newGuide,
@@ -107,5 +122,6 @@ module.exports = {
   addStep,
   removeStep,
   editStep,
-  updateStep
+  updateStep,
+  addComment
 };

@@ -46,5 +46,20 @@
             </form>
         </div>
     <% } %>
+    <div class="comments-section">
+        <div class='comments-container'>
+            <form action="/guides/<%=guide[0]._id%>/comments" method="POST">
+                <textarea class='step-input' name="comment" cols="34" rows="5" placeholder="Share comments here &#128522"></textarea><br>
+                <div class="card-buttons">
+                    <button class="secondary-btn" type="submit">Post</button>
+                </div>
+                <br>
+            </form>
+            <% guide[0].reviews.forEach(el=> { %>
+                <h5><%=el._id%></h5>
+                <p><%=el.comment%></p>
+            <% }) %> 
+        </div>
+    </div>
     <script src="/javascripts/add-step-function.js"></script>
     <%- include('../partials/footer') %>

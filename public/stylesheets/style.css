@@ -242,3 +242,21 @@ body {
 #step-form-container {
   margin: 5vmin;
 }
+
+.comments-section {
+  display: flex;
+  justify-content: center;
+}
+
+.comments-container {
+  width: 100%;
+  margin: 5vmin 5vmin 3vmin 5vmin;
+  background-color: whitesmoke;
+  border-radius: 50px;
+  padding: calc(0.7em + 20px) calc(0.4em + 20px);
+  max-width: 1000px;
+  }
+
+  .comments-container textarea {
+    width: 100%;
+  }
