@@ -56,7 +56,7 @@
                 <br>
             </form>
             <% guide[0].reviews.forEach(el=> { %>
-                <h5><%=el._id%></h5>
+                <h5><%=el.user_id.name%></h5>
                 <p><%=el.comment%></p>
             <% }) %> 
         </div>

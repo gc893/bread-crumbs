@@ -40,10 +40,14 @@ function search(req, res) {
 }
 
 function show(req, res) {
-  Guide.find({slug: req.params.id}, null, function(err, guide){
+  Guide.find({slug: req.params.id})
+  .populate({path: 'reviews', populate: { path: 'user_id' }
+  })
+  .then(guide => {
     if(guide.length < 1){
       res.redirect('/guides')//library later on with could not find message
     } else {
+    console.log(guide[0].reviews)
     res.render('guides/show', {title: 'test', guide, user: req.user})
     }
   })
@@ -99,16 +103,22 @@ function updateStep(req, res) {
 }
 
 function addComment(req,res) {
+  // console.log(req.user);
+  // req.body.username = req.user.name;
+  // if(req.user.avatar){
+  //   req.body.avatar = req.user.avatar;
+  // } else {
+  //   req.body.avatar = 'no avatar'
+  // }
   req.body.user_id = req.user._id
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key];
   }
-  console.log(req.body);
   Guide.findById(req.params.id)
     .then(guide => {
       guide.reviews.push(req.body);
       guide.save(function(err){
-        res.redirect(`/guides/${guide.slug}`)
+        res.redirect(`/guides/${guide.slug}`);
       })
     })
 }
