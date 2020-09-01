@@ -103,20 +103,13 @@ function updateStep(req, res) {
 }
 
 function addComment(req,res) {
-  // console.log(req.user);
-  // req.body.username = req.user.name;
-  // if(req.user.avatar){
-  //   req.body.avatar = req.user.avatar;
-  // } else {
-  //   req.body.avatar = 'no avatar'
-  // }
   req.body.user_id = req.user._id
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key];
   }
   Guide.findById(req.params.id)
     .then(guide => {
-      guide.reviews.push(req.body);
+      guide.reviews.unshift(req.body);
       guide.save(function(err){
         res.redirect(`/guides/${guide.slug}`);
       })

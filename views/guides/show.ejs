@@ -50,14 +50,24 @@
         <div class='comments-container'>
             <form action="/guides/<%=guide[0]._id%>/comments" method="POST">
                 <textarea class='step-input' name="comment" cols="34" rows="5" placeholder="Share comments here &#128522"></textarea><br>
-                <div class="card-buttons">
+                <div class="comment-buttons">
+                    <select name="score">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
                     <button class="secondary-btn" type="submit">Post</button>
                 </div>
                 <br>
             </form>
             <% guide[0].reviews.forEach(el=> { %>
                 <h5><%=el.user_id.name%></h5>
-                <p><%=el.comment%></p>
+                <div class="comment-details">
+                    <p><%=el.comment%></p>
+                    <p><%=el.score%></p>
+                </div>
             <% }) %> 
         </div>
     </div>

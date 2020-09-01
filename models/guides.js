@@ -2,8 +2,6 @@ const mongoose = require('mongoose');
 
 const reviewSchema = new mongoose.Schema({
     user_id: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
-    // username: {type: String, required: true},
-    // avatar: {type: String, required: true},
     comment: {type: String, required: true},
     score: {type: Number}
 }, {

@@ -260,3 +260,22 @@ body {
   .comments-container textarea {
     width: 100%;
   }
+
+  .comment-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5vmin;
+    border-bottom: 2px solid gray;
+  }
+
+  .comment-buttons select {
+    max-width: 100px;
+    margin-bottom: 0;
+  }
+
+  .comment-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
