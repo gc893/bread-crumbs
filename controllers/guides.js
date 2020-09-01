@@ -45,7 +45,7 @@ function show(req, res) {
   })
   .then(guide => {
     if(guide.length < 1){
-      res.redirect('/guides')//library later on with could not find message
+      res.redirect('/guides/list')//library later on with could not find message
     } else {
     console.log(guide[0].reviews)
     res.render('guides/show', {title: 'test', guide, user: req.user})
@@ -116,6 +116,13 @@ function addComment(req,res) {
     })
 }
 
+function list(req ,res) {
+  Guide.find({})
+  .then(guides => {
+    res.render('guides/list', {title: 'Guides', user: req.user, guides})
+  })
+}
+
 module.exports = {
   index,
   new: newGuide,
@@ -126,5 +133,6 @@ module.exports = {
   removeStep,
   editStep,
   updateStep,
-  addComment
+  addComment,
+  list
 };

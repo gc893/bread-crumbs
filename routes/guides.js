@@ -4,6 +4,7 @@ var guidesCtrl = require('../controllers/guides');
 /* GET home page. */
 router.get('/', isLoggedIn, guidesCtrl.index);//index
 router.get('/search', isLoggedIn, guidesCtrl.search);//use search middleware
+router.get('/list', isLoggedIn, guidesCtrl.list);
 router.get('/new', isLoggedIn, guidesCtrl.new);//render new view//admin
 router.get('/editStep', isLoggedIn, guidesCtrl.editStep);//render edit view//admin
 router.get('/:id', isLoggedIn, guidesCtrl.show);//show guide, comments and add comment box
