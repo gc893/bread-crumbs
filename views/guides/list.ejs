@@ -1,11 +1,11 @@
 <%- include('../partials/header') %>
-<h3 id="guide-title"><%=title%></h3>
-    <ul>
+<h3 id="library-title"><%=title%></h3>
+    <ul class="library-list">
         <% guides.forEach(function(el){ %>
-            <li>
+            <li class='library-items'>
                 <a href="/guides/<%=el.slug%>"><%=el.title%></a>
                 <% if(user.role === 'admin') {%> 
-                <a href="/guides/<%=el.slug%>/edit">x</a>
+                <button><a href="/guides/<%=el._id%>/edit">Edit</a></button>
                 <% }%> 
             </li>
         <% }) %>

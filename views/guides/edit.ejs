@@ -1,0 +1,24 @@
+<%- include('../partials/header') %>
+    <% if(user.role === 'admin') { %> 
+    <div class='main-container form-container'>
+        <form action="/guides/<%= guide._id %>?_method=PUT" method="post" class="new-guide-form">
+            <div class="inner-form-container">
+                <h3 id='sub-title'>Title</h3>
+                <input class="primary-input" type="text" value='<%=guide.title%>' name="title" id="name" required>
+            </div>
+            <div class="inner-form-container">
+                <h3 id='sub-title'>Action</h3>
+                <input class="primary-input" type="text" value='<%=guide.action%>' name="action" id="action" required>
+            </div>
+            <div class="inner-form-container">
+                <h3 id='sub-title'>Component</h3>
+                <input class="primary-input" type="text" value='<%=guide.app_component%>' name="app_component" id="app-component" required>
+              </div>
+            <div id="form-buttons-container">
+                <a href="/guides" class="main-btn cancel-button">Cancel</a>
+                <button type="submit" class="main-btn create-btn" id='form-btn'>Update</button>
+            </div>
+        </form>
+    </div>
+<% } %>
+<%- include('../partials/footer') %>

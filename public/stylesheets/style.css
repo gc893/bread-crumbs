@@ -291,3 +291,19 @@ body {
     justify-content: space-between;
     align-items: center;
   }
+
+  #library-title {
+    display: inline-block;
+    font-size: 2em;
+    font-family: 'Righteous', cursive;
+    margin: 5vmin;
+  }
+
+  .library-list {
+    margin-left: 5vmin;
+  }
+
+  .library-items a {
+    font-size: 1.2em;
+    color: black;
+  }

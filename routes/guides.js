@@ -8,10 +8,11 @@ router.get('/list', isLoggedIn, guidesCtrl.list);
 router.get('/new', isLoggedIn, guidesCtrl.new);//render new view//admin
 router.get('/editStep', isLoggedIn, guidesCtrl.editStep);//render edit view//admin
 router.get('/:id', isLoggedIn, guidesCtrl.show);//show guide, comments and add comment box
-router.get('/:id/edit', isLoggedIn, guidesCtrl.index);//render new view and load guide//admin
+router.get('/:id/edit', isLoggedIn, guidesCtrl.editGuide);//render new view and load guide//admin
 router.post('/', isLoggedIn, guidesCtrl.create);//add new guide//admin
 router.post('/:id/steps', isLoggedIn, guidesCtrl.addStep);//add new step//admin
 router.post('/:id/comments', isLoggedIn ,guidesCtrl.addComment);//add new comment
+router.put('/:id', isLoggedIn, guidesCtrl.updateGuide);
 router.put('/:stepId/updateStep', isLoggedIn, guidesCtrl.updateStep);//edit step//admin
 router.delete('/:id/:stepId', isLoggedIn, guidesCtrl.removeStep);
 

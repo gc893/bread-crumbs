@@ -123,6 +123,20 @@ function list(req ,res) {
   })
 }
 
+function editGuide(req ,res) {
+  Guide.findById(req.params.id)
+  .then(guide => {
+    res.render('guides/edit', {title: guide.title, guide, user: req.user})
+  })
+}
+
+function updateGuide(req, res) {
+  Guide.findByIdAndUpdate(req.params.id, req.body)
+  .then(()=> {
+    res.redirect('/guides/list')
+  })
+}
+
 module.exports = {
   index,
   new: newGuide,
@@ -134,5 +148,7 @@ module.exports = {
   editStep,
   updateStep,
   addComment,
-  list
+  list,
+  editGuide,
+  updateGuide
 };
