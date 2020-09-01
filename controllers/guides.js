@@ -66,7 +66,7 @@ function removeStep(req, res) {
   Guide.findById(req.params.id)
     .then(guide => {
       console.log(guide)
-      const idx = guide.steps.findIndex(el => el._id === req.params.stepId);
+      const idx = guide.steps.findIndex(el => el._id.toString() === req.params.stepId);
       guide.steps.splice(idx,1);
       guide.save(function(err){
         res.redirect(`/guides/${guide.slug}`)

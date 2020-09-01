@@ -13,7 +13,7 @@
                                 <input hidden type="text" name="stepId" value="<%=el._id%>">
                                 <button class="btn secondary-btn" type="submit">Edit</button>
                             </form>
-                            <form action="/guides/<%=guide[0]._id%>/<%=el._id%>?_method=DELETE" method="GET">
+                            <form action="/guides/<%=guide[0]._id%>/<%=el._id%>?_method=DELETE" method="POST">
                                 <button class="btn secondary-btn" type="submit">Delete</button>
                             </form>
                         </div>
