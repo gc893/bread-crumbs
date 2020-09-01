@@ -257,8 +257,19 @@ body {
   max-width: 1000px;
   }
 
+  .comments-container h5 {
+    width: 100%;
+    margin: 0;
+  }
+
   .comments-container textarea {
     width: 100%;
+  }
+
+  #date-created {
+    font-size: 0.9em;
+    margin-bottom: 0.7em;
+
   }
 
   .comment-buttons {
@@ -275,6 +286,7 @@ body {
   }
 
   .comment-details {
+    font-size: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;

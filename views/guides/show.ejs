@@ -64,8 +64,9 @@
             </form>
             <% guide[0].reviews.forEach(el=> { %>
                 <h5><%=el.user_id.name%></h5>
+                <p id="date-created"><%=el.createdAt.toLocaleDateString()%></p>
                 <div class="comment-details">
-                    <p><%=el.comment%></p>
+                    <p>- <%=el.comment%></p>
                     <p><%=el.score%></p>
                 </div>
             <% }) %> 
