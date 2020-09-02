@@ -50,7 +50,7 @@ function show(req, res) {
         guide[0].reviews.forEach(el=> {scoreSum += el.score});
         totalReviews = guide[0].reviews.length;
       }
-      let avgScore = Math.round((scoreSum/totalReviews)*10)/10;
+      let avgScore = Math.round((scoreSum/totalReviews)*10)/10 || 0;
     if(guide.length < 1){
       res.redirect('/guides/list')//could not find message
     } else {
