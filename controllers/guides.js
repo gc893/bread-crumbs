@@ -44,17 +44,17 @@ function show(req, res) {
   .populate({path: 'reviews', populate: { path: 'user_id' }
   })
   .then(guide => {
-      // let scoreSum = 0;
-      // if(guide[0].reviews.length > 0){
-      //   guide[0].reviews.forEach(el=> {scoreSum += el.score});
-      //   let totalReviews = guide[0].reviews.length;
-      //   let avgScore = Math.round((scoreSum/totalReviews)*10)/10;
-      // }
+      let scoreSum = 0;
+      let totalReviews = 1;
+      if (guide.length > 0) {
+        guide[0].reviews.forEach(el=> {scoreSum += el.score});
+        totalReviews = guide[0].reviews.length;
+      }
+      let avgScore = Math.round((scoreSum/totalReviews)*10)/10;
     if(guide.length < 1){
-      res.redirect('/guides/list')//library later on with could not find message
+      res.redirect('/guides/list')//could not find message
     } else {
-    res.render('guides/show', {title: 'test', guide, user: req.user})
-    //res.render('guides/show', {title: 'test', guide, user: req.user, average: avgScore})
+    res.render('guides/show', {title: 'test', guide, user: req.user, average: avgScore})
   }
   })
 }

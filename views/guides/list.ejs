@@ -2,6 +2,7 @@
 <h3 id="library-title"><%=title%></h3>
     <ul class="library-list">
         <% guides.forEach(function(el){ %>
+            <br><br>
             <li class='library-items'>
                 <a href="/guides/<%=el.slug%>"><%=el.title%></a>
                 <% if(user.role === 'admin') {%> 
