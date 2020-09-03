@@ -66,7 +66,7 @@
 ## Stretch Goals
 
 - Store and retrieve a user's progress on a guide.
-- Program automatic email to admin when a review is under 4 points.
+- ~~Program automatic email to admin when a review is under 4 points.~~
 - Filter out invalid option combinations on the search page.
 
 ## Challenges
@@ -79,3 +79,6 @@
 - HTML Styled Code Blocks
   - [Prism](https://prismjs.com/)
   - [CDN](https://cdnjs.com/libraries/prism)
+  - Send Emails
+    - [Nodemailer](https://nodemailer.com/about/)
+    - [Tutorial](https://blog.mailtrap.io/nodemailer-gmail/)
