@@ -1,4 +1,5 @@
 const Guide = require('../models/guides');
+const sendMail = require('../mail');
 
 function index(req, res) {
   Guide.find({}, null, function(err, guides) {
@@ -117,6 +118,9 @@ function addComment(req,res) {
     .then(guide => {
       guide.reviews.unshift(req.body);
       guide.save(function(err){
+        if(req.body.score < 4){
+          sendMail(req.user.name, guide.title, req.body.comment, req.body.score);
+        }
         res.redirect(`/guides/${guide.slug}`);
       })
     })
