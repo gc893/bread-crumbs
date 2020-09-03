@@ -74,7 +74,7 @@
 - Deep populate (mongoose)
   - [Mongoose Docs](https://mongoosejs.com/docs/populate.html#deep-populate)
 - Using/Reading Query Strings (HTML GET Forms)
-  - [HTML Memo](https://www.ietf.org/rfc/rfc1866.txt)
+  - [HTML Memo - Page 46](https://www.ietf.org/rfc/rfc1866.txt)
   - [Express Query Strings](https://stackabuse.com/get-query-strings-and-parameters-in-express-js/)
 - HTML Styled Code Blocks
   - [Prism](https://prismjs.com/)
