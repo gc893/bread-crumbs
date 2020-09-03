@@ -31,7 +31,7 @@
 - [FontAwesome for the Log In, Log out and LinkedIn icons](https://fontawesome.com/)
 - [Prism](https://prismjs.com/)
 - [Bootstrap](https://getbootstrap.com/)
-- [Gogole Fonts](https://fonts.google.com/)
+- [Google Fonts](https://fonts.google.com/)
 
 
 ## Wirefreames To-Dos and ERDs
@@ -79,6 +79,6 @@
 - HTML Styled Code Blocks
   - [Prism](https://prismjs.com/)
   - [CDN](https://cdnjs.com/libraries/prism)
-  - Send Emails
-    - [Nodemailer](https://nodemailer.com/about/)
-    - [Tutorial](https://blog.mailtrap.io/nodemailer-gmail/)
+- Send Emails
+  - [Nodemailer](https://nodemailer.com/about/)
+  - [Tutorial](https://blog.mailtrap.io/nodemailer-gmail/)
