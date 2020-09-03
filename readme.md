@@ -23,10 +23,16 @@
 - Heroku
 - EJS
 - Git
-- Prism.js
-- FontAwesome
-- getbootstrap.com
-- Google Fonts
+
+
+## Credits
+- [David Stinson for the MVC Diagram](https://www.linkedin.com/in/david-stinson/)
+- [Jim Clark for the Route Mapping table](https://www.linkedin.com/in/jimclarkfullstack)
+- [FontAwesome for the Log In, Log out and LinkedIn icons](https://fontawesome.com/)
+- [Prism](https://prismjs.com/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Gogole Fonts](https://fonts.google.com/)
+
 
 ## Wirefreames To-Dos and ERDs
 
