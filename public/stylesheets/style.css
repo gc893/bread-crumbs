@@ -257,6 +257,29 @@ body {
   max-width: 1000px;
   }
 
+  #singleComment {
+    display: flex;
+    justify-items: center;
+    align-items: baseline;
+  }
+
+  #commentBody {
+    width: 100%;
+  }
+
+  .comments-container img {
+    width: 50px;
+    border-radius: 50px;
+    border: 3px solid white;
+    margin-right: 1em;
+  }
+
+  .commentDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .comments-container h5 {
     width: 100%;
     margin: 0;
