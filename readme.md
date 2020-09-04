@@ -9,6 +9,14 @@
 
 *The app will also let an admin user create, edit and delete guides (and steps inside those guides) to easily maintain the content of the guides.*
 
+
+## Screenshots
+
+![img](https://i.imgur.com/aYr3U19.png)
+![img](https://i.imgur.com/uuQamzr.png)
+![img](https://i.imgur.com/A2n25D4.png)
+
+
 ## Technologies
 
 - HTML
